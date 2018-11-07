@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := Hi9Air
+PRODUCT_RELEASE_NAME := hi9plus
 
 $(call inherit-product, build/target/product/embedded.mk)
 
@@ -23,16 +23,15 @@ $(call inherit-product, build/target/product/embedded.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 PRODUCT_COPY_FILES += \
-    device/CHUWI/Hi9Air/recovery/root/init.recovery.mt6797.rc:recovery/root/init.recovery.mt6797.rc \
-    device/CHUWI/Hi9Air/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab \
-#    device/CHUWI/Hi9Air/recovery/root/sbin/fuelgauged_static:recovery/root/sbin/fuelgauged_static
+    device/chuwi/hi9plus/recovery/root/init.recovery.mt6797.rc:recovery/root/init.recovery.mt6797.rc \
+    device/chuwi/hi9plus/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab \
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := Hi9Air
-PRODUCT_NAME := omni_Hi9Air
-PRODUCT_BRAND := CHUWI
-PRODUCT_MODEL := Hi9Air
-PRODUCT_MANUFACTURER := CHUWI
+PRODUCT_DEVICE := hi9plus
+PRODUCT_NAME := omni_hi9plus
+PRODUCT_BRAND := chuwi
+PRODUCT_MODEL := hi9plus
+PRODUCT_MANUFACTURER := chuwi
 
 # enable stock zip packages flash
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

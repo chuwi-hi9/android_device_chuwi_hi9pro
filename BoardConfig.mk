@@ -48,7 +48,7 @@ BOARD_RAMDISK_OFFSET := 0x04f88000
 BOARD_SECOND_OFFSET := 0x00e88000
 BOARD_TAGS_OFFSET := 0x03f88000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --second_offset $(BOARD_SECOND_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET)
-TARGET_PREBUILT_KERNEL := device/CHUWI/Hi9Air/prebuilt/zImage
+TARGET_PREBUILT_KERNEL := device/chuwi/hi9plus/prebuilt/zImage
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6797
@@ -84,7 +84,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_DEVICE_VERSION := 0
-#TW_USE_TOOLBOX := true
 TW_NO_EXFAT_FUSE := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_INCLUDE_CRYPTO := true
@@ -95,6 +94,3 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 TW_NO_SCREEN_BLANK := true
-#RECOVERY_TOUCHSCREEN_SWAP_XY := true
-#RECOVERY_TOUCHSCREEN_FLIP_X := true
-#RECOVERY_TOUCHSCREEN_FLIP_Y := true
