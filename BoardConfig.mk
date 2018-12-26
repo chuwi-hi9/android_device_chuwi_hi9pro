@@ -53,7 +53,7 @@ TARGET_PREBUILT_KERNEL := device/chuwi/hi9pro/prebuilt/zImage
 # Platform
 TARGET_BOARD_PLATFORM := mt6797
 
-# Partitions131072
+# Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
@@ -76,9 +76,9 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 # TWRP specific build flags
 RECOVERY_VARIANT := twrp
-DEVICE_RESOLUTION := 1600x2560
-DEVICE_SCREEN_WIDTH := 1600
-DEVICE_SCREEN_HEIGHT := 2560
+DEVICE_RESOLUTION := 2560X1600
+DEVICE_SCREEN_WIDTH := 2560
+DEVICE_SCREEN_HEIGHT := 1600
 TW_THEME := landscape_mdpi
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
@@ -96,5 +96,3 @@ TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 TW_NO_SCREEN_BLANK := true
 TW_HWROTATION := 270
-RECOVERY_TOUCHSCREEN_SWAP_XY := true
-RECOVERY_TOUCHSCREEN_FLIP_Y := true
