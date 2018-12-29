@@ -1,6 +1,6 @@
 # Copyright (C) 2018 The LineageOS Project
 
-DEVICE_PATH := device/chuwi/hi9pro
+DEVICE_PATH := $(DEVICE_PATH)/chuwi/hi9pro
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6797
@@ -31,6 +31,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE = bootopt=64S3,32N2,64N2
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04f88000 --second_offset=0x00e88000 --tags_offset 0x03f88000
 
 # Partitions
@@ -60,8 +61,8 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6797
 #LZMA_RAMDISK_TARGETS := recovery
 
 # Treble
-BOARD_VNDK_RUNTIME_DISABLE := true
-BOARD_VNDK_VERSION := current
+#BOARD_VNDK_RUNTIME_DISABLE := true
+#BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 # Vendor
@@ -91,5 +92,9 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib/vndk-compat/libstagefright_omx.so|/system/lib/libstagefright_omx_shim.so \
     /system/lib64/vndk-compat/libstagefright_omx.so|/system/lib64/libstagefright_omx_shim.so
 
+# Vendor
+BOARD_USES_VENDORIMAGE := true
+TARGET_COPY_OUT_VENDOR := vendor
+
 # Inherit from the proprietary version
--include vendor/chuwi/hi9pro/BoardConfigVendor.mk
+include vendor/chuwi/hi9pro/BoardConfigVendor.mk
