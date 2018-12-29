@@ -31,7 +31,7 @@ PRODUCT_PACKAGES += \
     fstab.mt6797
 
 # VNDK
-PRODUCT_PACKAGES += vndk_package
+#PRODUCT_PACKAGES += vndk_package
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vndk-26/ld.config.compat.txt:system/etc/ld.config.compat.txt \
     $(LOCAL_PATH)/vndk-26/vndk-compat.rc:system/etc/init/vndk-compat.rc
@@ -71,7 +71,7 @@ PRODUCT_PACKAGES += \
     libstagefright_omx_shim
 
 # Properties
--include $(LOCAL_PATH)/system_prop.mk
+include $(LOCAL_PATH)/system_prop.mk
 
 # Call proprietary blob setup
 $(call inherit-product, vendor/chuwi/hi9pro/hi9pro-vendor.mk)
