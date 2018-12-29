@@ -8,13 +8,6 @@ ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay-lineage
 endif
 
-# Boot control
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
-
-#PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-#    bootctrl.mt6797
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
@@ -34,18 +27,18 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 #PRODUCT_PACKAGES += vndk_package
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/vndk-26/ld.config.compat.txt:system/etc/ld.config.compat.txt \
-    $(DEVICE_PATH)/vndk-26/vndk-compat.rc:system/etc/init/vndk-compat.rc
+#PRODUCT_COPY_FILES += \
+#    $(DEVICE_PATH)/vndk-26/ld.config.compat.txt:system/etc/ld.config.compat.txt \
+#    $(DEVICE_PATH)/vndk-26/vndk-compat.rc:system/etc/init/vndk-compat.rc
 
 # SP-NDK
 PRODUCT_PACKAGES += \
     libvulkan
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/compatibility_matrix.xml:system/compatibility_matrix.xml
+    $(DEVICE_PATH)/manifest.xml:system/manifest.xml
 
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
