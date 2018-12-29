@@ -1,6 +1,6 @@
 # Copyright (C) 2018 The LineageOS Project
 
-DEVICE_PATH := $(DEVICE_PATH)/chuwi/hi9pro
+DEVICE_PATH := device/chuwi/hi9pro
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6797
